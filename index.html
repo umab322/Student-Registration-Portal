@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+
+    <h1>
+        <i class="fa-solid fa-user-graduate"></i>
+        Student Registration Portal
+    </h1>
+
+    <button id="themeToggle">
+        🌙 Dark Mode
+    </button>
+</header>
+
+<main class="container">
+
+    <!-- ================= Statistics ================= -->
+
+    <section class="stats">
+
+        <div class="card">
+            <h2 id="totalStudents">0</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="card">
+            <h2 id="maleStudents">0</h2>
+            <p>Male</p>
+        </div>
+
+        <div class="card">
+            <h2 id="femaleStudents">0</h2>
+            <p>Female</p>
+        </div>
+
+        <div class="card">
+            <h2 id="departmentCount">0</h2>
+            <p>Departments</p>
+        </div>
+
+        <div class="card">
+            <h2 id="averageAge">0</h2>
+            <p>Average Age</p>
+        </div>
+
+    </section>
+
+    <!-- ================= FORM ================= -->
+
+    <section class="glass">
+
+        <form id="studentForm">
+
+            <h2>Student Registration</h2>
+
+            <div class="grid">
+
+                <!-- Name -->
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter Full Name">
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter Email">
+
+                </div>
+
+                <!-- Phone -->
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Phone Number">
+
+                </div>
+
+                <!-- DOB -->
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="date"
+                        id="dob">
+
+                </div>
+
+                <!-- Age -->
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Age">
+
+                </div>
+
+                <!-- Department -->
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <select id="department">
+
+                        <option value="">Choose</option>
+
+                        <option>CSE</option>
+
+                        <option>IT</option>
+
+                        <option>ECE</option>
+
+                        <option>EEE</option>
+
+                        <option>Mechanical</option>
+
+                        <option>Civil</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- Gender -->
+
+            <div class="section">
+
+                <h3>Gender</h3>
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Male">
+
+                    Male
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Female">
+
+                    Female
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Other">
+
+                    Other
+
+                </label>
+
+            </div>
+
+            <!-- Skills -->
+
+            <div class="section">
+
+                <h3>Skills</h3>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        value="HTML"
+                        class="skills">
+
+                    HTML
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        value="CSS"
+                        class="skills">
+
+                    CSS
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        value="JavaScript"
+                        class="skills">
+
+                    JavaScript
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        value="React"
+                        class="skills">
+
+                    React
+
+                </label>
+
+            </div>
+
+            <!-- Address -->
+
+            <div class="input-group">
+
+                <label></label>
+
+                <textarea
+                    id="address"
+                    rows="4"
+                    placeholder="Address"></textarea>
+
+            </div>
+
+            <!-- Address Grid -->
+
+            <div class="grid">
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="text"
+                        id="country"
+                        placeholder="Country">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="text"
+                        id="state"
+                        placeholder="State">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="City">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="text"
+                        id="zip"
+                        placeholder="Zip Code">
+
+                </div>
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="grid">
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label></label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password">
+
+                </div>
+
+            </div>
+
+            <!-- Upload -->
+
+            <div class="input-group">
+
+                <label></label>
+
+                <input
+                    type="file"
+                    id="image"
+                    accept=".jpg,.jpeg,.png">
+
+            </div>
+
+            <div class="preview">
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt="Preview">
+
+                <button
+                    type="button"
+                    id="removeImage">
+
+                    Remove Image
+
+                </button>
+
+            </div>
+
+            <!-- Terms -->
+
+            <div class="section">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="terms">
+
+                    I agree to Terms and Conditions
+
+                </label>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Submit
+
+                </button>
+
+                <button
+                    type="reset"
+                    id="resetBtn">
+
+                    Reset
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="toolbar">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search by Name or Email">
+
+        <select id="filterDepartment">
+
+            <option value="">All Departments</option>
+
+            <option>CSE</option>
+
+            <option>IT</option>
+
+            <option>ECE</option>
+
+            <option>EEE</option>
+
+            <option>Mechanical</option>
+
+            <option>Civil</option>
+
+        </select>
+
+        <select id="filterGender">
+
+            <option value="">All Gender</option>
+
+            <option>Male</option>
+
+            <option>Female</option>
+
+            <option>Other</option>
+
+        </select>
+
+        <select id="sortStudents">
+
+            <option value="">Sort</option>
+
+            <option value="az">A-Z</option>
+
+            <option value="za">Z-A</option>
+
+            <option value="new">Newest</option>
+
+            <option value="old">Oldest</option>
+
+        </select>
+
+        <button id="exportBtn">
+
+            Export JSON
+
+        </button>
+
+        <input
+            type="file"
+            id="importFile"
+            accept=".json">
+
+    </section>
+
+    <!-- ================= TABLE ================= -->
+
+    <section class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Phone</th>
+
+                    <th>Gender</th>
+
+                    <th>Department</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="studentTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<!-- View Student Modal -->
+
+<div id="viewModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <div id="studentDetails">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
